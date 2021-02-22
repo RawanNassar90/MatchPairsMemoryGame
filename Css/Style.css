@@ -1,0 +1,51 @@
+h3 {
+     text-align: center;
+}
+ .content {
+     max-width:500px;
+     min-width:500px;
+     border: 3px solid #77646a;
+     font-family: cursive !important;
+}
+ .img{
+     width: 100px;
+     height: 100px;
+     margin: 5px;
+     display: inline-block;
+}
+ .result{
+     border-top: 3px solid #77646a;
+     padding-top: 10px;
+}
+ .refresh-img{
+     width: 20px;
+     height: 20px;
+     cursor: pointer;
+}
+ .center-text{
+     text-align:center;
+}
+ .logo-img{
+     width: 15px;
+     height: 15px 
+}
+ .result-table{
+     margin-bottom: 2px !important;
+}
+ .logo {
+     cursor:pointer;
+}
+ .disapeared-img{
+     width: 20px;
+     height: 20px;
+     margin: 5px;
+     display: inline-block;
+}
+ .success-msg {
+     color: #ffffff;
+     background-color: #423539;
+     border-color: #483b3f;
+     padding: 10px !important;
+     margin-top: 20px;
+     margin-bottom: 10px;
+}
