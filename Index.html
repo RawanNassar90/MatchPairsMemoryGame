@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="Css/Bootstrap-3.3.0.min.css">
+    <link rel="stylesheet" type="text/css" href="Css/Style.css">
+    <script src="Scripts/jquery-1.11.1.min.js"></script>
+    <script src="Scripts/knockout-3.5.1.js"></script>
+    <script src="Scripts/Main.js"></script>
+    <title>Match Pairs Memory Game</title>
+</head>
+
+<body>
+    <form>
+        <div class="container-fluid content" id="divGame">
+            <h3> <span data-bind="text:gameTitle"></span> <img class="refresh-img" title="Refresh" src="Images/refresh.png" data-bind='click:refresh'> </h3>
+            <div class="success-msg" data-bind="style:{'display': displaySuccessMsg}"><strong>Congratulations!</strong> You did it </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class=" row" data-bind="style:{'display' : displayImgsRows},foreach: imgsRows">
+                        <div class="col-md-12" data-bind="foreach: $data">
+                            <div class="img" data-bind="click:$root.onClickImage  , style: {  'pointer-events' : imgPointerEvent , 'background-image': currentShownImgUrl}"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row result">
+                <div class="col-md-2">
+                    <div class="row" data-bind="foreach: disapearedImgsRowsFirstPart">
+                        <div class="disapeared-img" data-bind="style: { 'background-image' : imgUrl }"></div>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    <table class="table table-bordered  result-table">
+                        <thead>
+                            <tr>
+                                <th>Cards Flipped</th>
+                                <th>Score</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-bind="text:cardsFlipped"></td>
+                                <td data-bind="text:score"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-2">
+                    <div class="row" data-bind="foreach: disapearedImgsRowsSecondPart">
+                        <div class="disapeared-img" data-bind="style: { 'background-image' : imgUrl }"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="center-text logo" data-bind='click:getLogoDetails'> <span>Developed by Rawan Nassar</span> <img class="logo-img" src="https://nijzda.db.files.1drv.com/y4mCw0mhNEPJKDcbn5NInKCg6lAF2TIhVO9tABSuYGwIOjRW6jsHFUSimoCEVUHDni6HgsXdcebDe1AHE2xs9JkOUYodAzH6N0hHrHhjmcwlKJ3dyQyudr-yofuUNgiJZHovnd9oZc846_gTOYN59f5DIu9WcCMlSFsmE4RAV7AYngRFW68U2bAZbx0b5PGFolEDSWhXmFrZzt5nFPK-NHjJg/rawanNassarLogo.png?psid=1"> </div>
+        </div>
+    </form>
+</body>
+</html>
